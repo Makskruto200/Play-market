@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+				<meta charset="UTF-8">
+				<title></title>
+</head>
+<body><style>h5{font-size:30px;}</style>
+				{%for i in app%}
+				<h1><center>{{i[0]}}</center></h1>
+			<center><a href={{i[1]}} dowland>Скачать</a></center>
+	<center>		<h5><b>{{i[2]}}</b></h5></center>
+	    {%if i[3]%}
+			<center>	<img src={{i[3]}}></center>
+				{%endif%}
+				
+				  {%if i[4]%}
+			<center>	<img src={{i[4]}}></center>
+				{%endif%}
+				 {%if i[5]%}
+			<center>	<img src={{i[5]}}></center>
+				{%endif%}
+				
+				 {%if i[6]%}
+			<center>	<img src={{i[6]}}></center>
+				{%endif%}
+				 {%if i[7]%}
+			<center>	<img src={{i[7]}}></center>
+				{%endif%}
+	
+				 {%if i[8]%}
+			<center>	<
+			<video controls height="450px" width="960px" >
+	
+							<source src={{i[8]}} >
+			</video></center>
+				{%endif%}
+				<form action="/comment/{{i[0]}}" method="post">
+				<p><label>Ваш Email:</label><input type="text" name="email" value="" required></p>
+	  				<p><label>Коментарий:</label><input type="text" name="comment" value="" required></p>
+	  				<p><label>Лайк</label><input type="radio" name="zena" value="laik" required></p>
+	  				<p><label>Дизлайк</label><input type="radio" name="zena" value="dilaik" required></p>
+	                           <p><input type="submit" value="Оставить комментарий"></p>
+	      {%for i in ozenka%}
+	      <p>Лайки:{{i[0]}}</p>
+	      <p>Дизлайки:{{i[1]}}</p>
+	      {%endfor%}
+	     </form>
+					{%endfor%}
+					{%if comment%}
+					{%for i in comment%}
+					<p>{{i[1]}}</p>
+					
+					<p>{{i[2]}}</p>
+					<hr>
+					{%endfor%}
+					{%else%}
+					<p>Нет коментариев,станьте первым)</p>
+					{%endif%}
+					
+					
+				
+	  				
+	  				
+	    
+				
+				
+				
+		
+			
+				
+</body>
+</html>

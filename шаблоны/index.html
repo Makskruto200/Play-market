@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+				<meta charset="UTF-8">
+				<title>Заголовок страницы</title>
+</head>
+<body><style>
+				a{font-size:50px;}</style>
+				<center><h1>PLAY MARKET</h1></center>
+				{%for i in category%}
+				<p><a href="/category/{{i[1]}}">{{i[0]}}</a></p>
+				{%endfor%}
+				{%for i in app%}
+				
+				<center><h2><a href="/app/{{i[0]}}">{{i[0]}}</a></h2></center>
+				<center><img src={{i[3]}}></center>
+				
+				{%endfor%}
+				
+</body>
+</html>
